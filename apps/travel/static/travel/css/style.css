@@ -1,0 +1,45 @@
+/* general styling */
+.error{
+  color: red;
+}
+nav{
+  background-color: lightblue;
+  height: 5%;
+}
+nav a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: right;
+  width: 100%;
+  display: inline-block;
+}
+/* main styling */
+#register, #login{
+  display: inline-block;
+  width: 40%;
+  border: 1px solid black;
+}
+#login{
+  vertical-align: top;
+}
+button{
+  display: block;
+}
+
+/* dashboard styling */
+thead{
+  background-color: #c9e2ea;
+  
+}
+tr:nth-child(even) {
+  background: #ebf1f3;
+  
+}
+
+td{
+  width: 20%;
+}
+table{
+  margin-bottom: 25px;
+}

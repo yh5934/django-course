@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Plan</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'travel/css/style.css' %}">
+  </head>
+  <body>
+    <nav>
+      <a href="{% url 'travel:dashboard' %}">Home</a>
+      <a href="{% url 'logreg:logout' %}">Log out</a>
+    </nav>
+    <h2>Add a Trip</h2>
+    <div id="flash_messages">
+      {% if messages %}
+      {% for message in messages %}
+      <p class="error">{{message}}</p>
+      {% endfor %}
+      {% endif %}
+    </div>
+    <form action="{% url 'travel:add' %}" method="post">
+      {% csrf_token %}
+      <p>Destination</p>
+      <input type="text" name="destination">
+      <p>Description</p>
+      <input type="text" name="plan">
+      <p>Travel Date From</p>
+      <input type="date" name="travel_start_date">
+      <p>Travel Date To</p>
+      <input type="date" name="travel_end_date">
+      <button type="submit" name="button">Add</button>
+    </form>
+  </body>
+</html>
